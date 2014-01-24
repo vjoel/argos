@@ -19,17 +19,17 @@ or simply copy argos.rb into your project's lib dir.
 Synopsis
 --------
 
-   require 'argos'
+     require 'argos'
 
-   optdef = {
-     "v"   => true,
-     "n"   => proc {|arg| Integer(arg)}
-   }
+     optdef = {
+       "v"   => true,
+       "n"   => proc {|arg| Integer(arg)}
+     }
 
-   argv = %w{-v -n10 filename}
-   opts = Argos.parse_options(argv, optdef)
-   p opts    # ==> {"v"=>true, "n"=>10}
-   p argv    # ==> ["filename"]
+     argv = %w{-v -n10 filename}
+     opts = Argos.parse_options(argv, optdef)
+     p opts    # ==> {"v"=>true, "n"=>10}
+     p argv    # ==> ["filename"]
 
 See also [example dir](example/).
 
@@ -88,6 +88,9 @@ Limitations
 
 - There is no usage/help output.
 
+
+About
+-----
 
 Copyright (C) 2006-2014 Joel VanderWerf, mailto:vjoel@users.sourceforge.net.
 
